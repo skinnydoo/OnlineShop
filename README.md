@@ -42,11 +42,6 @@ npm start
 
 If everything goes well, the server will be accessible from the following address: `http://localhost:3000`. As for the client, it will be accessible from: `http://localhost: 8000`.
 
-## Test
-
-```
-npm run e2e
-```
 
 ## Repo structure
 

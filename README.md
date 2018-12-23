@@ -42,22 +42,17 @@ npm start
 
 If everything goes well, the server will be accessible from the following address: `http://localhost:3000`. As for the client, it will be accessible from: `http://localhost: 8000`.
 
-## Test
-
-```
-npm run e2e
-```
 
 ## Repo structure
 
 This is a monolithic repository containing 2 sub-projects.
 
 1. Client : An Angular app
-2. Server : A NodeJS server
+2. Server : A Node app
 
 ## Projects
 
-[:diamonds: Root](./README.md)
+[:arrow_heading_up: Root](./README.md)
 
 [:point_right: Client](client/)
 

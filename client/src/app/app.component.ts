@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ShoppingCartService } from './shopping-cart.service';
+import {Component, OnInit} from '@angular/core';
+import {ShoppingCartService} from './shopping-cart.service';
 
 /**
  * Defines the main component of the application.
@@ -11,8 +11,8 @@ import { ShoppingCartService } from './shopping-cart.service';
 export class AppComponent implements OnInit {
 
   readonly authors = [
-    'Antoine Béland',
-    'Konstantinos Lambrou-Latreille'
+    'Simelus Ralph',
+    'Jason Li'
   ];
   shoppingCartCount = 0;
 

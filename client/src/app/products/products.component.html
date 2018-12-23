@@ -39,7 +39,8 @@
       <a [routerLink]="'/produits/' + product.id" title="En savoir plus...">
         <h2>{{ product.name }}</h2>
         <img [alt]="product.name" [src]="'./assets/img/' + product.image">
-        <p class="pull-right"><small>Prix</small> <span [innerHTML]="product.price | price"></span></p>
+        <p class="pull-right"><small>Prix </small><span
+          [innerHTML]="product.price | price"></span></p>
       </a>
     </div>
   </div>

@@ -52,7 +52,7 @@ This is a monolithic repository containing 2 sub-projects.
 
 ## Projects
 
-[:diamonds: Root](./README.md)
+[:arrow_heading_up: Root](./README.md)
 
 [:point_right: Client](client/)
 

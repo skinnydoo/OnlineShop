@@ -48,7 +48,7 @@ If everything goes well, the server will be accessible from the following addres
 This is a monolithic repository containing 2 sub-projects.
 
 1. Client : An Angular app
-2. Server : A NodeJS server
+2. Server : A Node app
 
 ## Projects
 

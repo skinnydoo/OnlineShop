@@ -1,0 +1,46 @@
+<section class="sidebar" aria-label="Filtres">
+  <section>
+    <h2>Catégories</h2>
+    <div class="btn-group vertical" id="product-categories">
+      <button (click)="applyCategory('cameras')"
+              [class.selected]="activeCategory === 'cameras'">Appareils photo</button>
+      <button (click)="applyCategory('consoles')"
+              [class.selected]="activeCategory === 'consoles'">Consoles</button>
+      <button (click)="applyCategory('screens')"
+              [class.selected]="activeCategory === 'screens'">Écrans</button>
+      <button (click)="applyCategory('computers')"
+              [class.selected]="activeCategory === 'computers'">Ordinateurs</button>
+      <button (click)="applyCategory('all')"
+              [class.selected]="activeCategory === 'all'">Tous les produits</button>
+    </div>
+  </section>
+  <section>
+    <h2>Classement</h2>
+    <div class="btn-group vertical" id="product-criteria">
+      <button (click)="applySortingCriteria('price-asc')"
+              [class.selected]="activeSortingCriteria === 'price-asc'">Prix (bas-haut)</button>
+      <button (click)="applySortingCriteria('price-dsc')"
+              [class.selected]="activeSortingCriteria === 'price-dsc'">Prix (haut-bas)</button>
+      <button (click)="applySortingCriteria('alpha-asc')"
+              [class.selected]="activeSortingCriteria === 'alpha-asc'">Nom (A-Z)</button>
+      <button (click)="applySortingCriteria('alpha-dsc')"
+              [class.selected]="activeSortingCriteria === 'alpha-dsc'">Nom (Z-A)</button>
+    </div>
+  </section>
+</section>
+<article>
+  <span class="right-header" id="products-count" *ngIf="products">
+    {{ products.length }} produit<span *ngIf="products.length > 1">s</span>
+  </span>
+  <h1>Produits</h1>
+  <div class="loading" *ngIf="!products"></div>
+  <div class="products" id="products-list" *ngIf="products">
+    <div class="product" *ngFor="let product of products">
+      <a [routerLink]="'/produits/' + product.id" title="En savoir plus...">
+        <h2>{{ product.name }}</h2>
+        <img [alt]="product.name" [src]="'./assets/img/' + product.image">
+        <p class="pull-right"><small>Prix</small> <span [innerHTML]="product.price | price"></span></p>
+      </a>
+    </div>
+  </div>
+</article>

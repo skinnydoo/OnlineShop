@@ -1,0 +1,30 @@
+{
+  "name": "online-shop",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "cd ./client && npm install && cd .. && cd ./server && npm install",
+    "start": "concurrently \"cd ./client && npm start\" \"cd ./server && npm start\"",
+    "e2e": "nightwatch --config ./tests/nightwatch.json",
+    "clean": "cd ./client && rm -rf node_modules && cd .. && cd ./server && rm -rf node_modules && cd .. && rm -rf node_modules"
+  },
+  "engines": {
+    "node": "~11.2.0",
+    "npm": "~6.5.0"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "chai": "^4.2.0",
+    "chai-http": "^3.0.0",
+    "concurrently": "^3.6.1",
+    "events": "^1.1.1",
+    "mocha": "^3.5.0",
+    "nightwatch": "^0.9.21",
+    "nightwatch-custom-commands-assertions": "^1.1.1",
+    "nodemon": "^1.18.9",
+    "random-number": "0.0.9",
+    "request": "^2.88.0",
+    "util": "^0.10.4"
+  },
+  "dependencies": {}
+}

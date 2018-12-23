@@ -1,0 +1,53 @@
+<article>
+  <h1>Panier</h1>
+  <div class="loading" *ngIf="!shoppingCartItems"></div>
+  <p *ngIf="shoppingCartItems && shoppingCartItems.length <= 0">Aucun produit dans le panier.</p>
+  <div *ngIf="shoppingCartItems && shoppingCartItems.length > 0">
+    <table class="table shopping-cart-table">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Produit</th>
+        <th>Prix unitaire</th>
+        <th>Quantité</th>
+        <th>Prix</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of shoppingCartItems">
+        <td>
+          <button class="remove-item-button" title="Supprimer" (click)="removeItemFromCart(item.product.id)">
+            <i class="fa fa-times"></i>
+          </button>
+        </td>
+        <td>
+          <a [routerLink]="'/produits/' + item.product.id">{{ item.product.name }}</a>
+        </td>
+        <td [innerHTML]="item.product.price | price"></td>
+        <td>
+          <div class="row">
+            <div class="col">
+              <button class="remove-quantity-button" title="Retirer"
+                      (click)="decreaseItemQuantity(item)" [disabled]="item.quantity <= 1">
+                <i class="fa fa-minus"></i>
+              </button>
+            </div>
+            <div class="col quantity">{{ item.quantity }}</div>
+            <div class="col">
+              <button class="add-quantity-button" title="Ajouter" (click)="increaseItemQuantity(item)">
+                <i class="fa fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </td>
+        <td class="price" [innerHTML]="item.total | price"></td>
+      </tr>
+      </tbody>
+    </table>
+    <p class="shopping-cart-total">Total: <strong id="total-amount" [innerHTML]="totalAmount | price"></strong></p>
+    <a class="btn pull-right" routerLink="/commande">Commander <i class="fa fa-angle-double-right"></i></a>
+    <button class="btn" id="remove-all-items-button" (click)="removeAllItemsFromCart()">
+      <i class="fa fa-trash-o"></i>&nbsp; Vider le panier
+    </button>
+  </div>
+</article>

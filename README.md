@@ -1,6 +1,6 @@
 # OnlineShop
 
-OnlineShop is a mock up of a transactional website that allows users to purchase electronic products online. The kind of functionnality we see in website like Amazon, Newegg etc...
+OnlineShop is a showcase of a transactional website that allows users to purchase electronic products online. The kind of functionnality we see in website like Amazon, Newegg etc...
 
 ## Install
 

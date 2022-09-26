@@ -19,7 +19,7 @@
     "concurrently": "^3.6.1",
     "events": "^1.1.1",
     "mocha": "^3.5.0",
-    "nightwatch": "^0.9.21",
+    "nightwatch": "^2.3.9",
     "nightwatch-custom-commands-assertions": "^1.1.1",
     "nodemon": "^1.18.9",
     "random-number": "0.0.9",
